@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos y Estadísticas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Datos de Sensores</h1>
+        
+        <!-- Tabla de Datos Crudos -->
+        <h2>Datos Crudos</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Temperatura Interior (°C)</th>
+                    <th>Temperatura Exterior (°C)</th>
+                    <th>Humedad (%)</th>
+                    <th>Gas (ppm)</th>
+                </tr>
+            </thead>
+            <tbody id="data-table-body">
+                <!-- Datos se llenarán dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Gráficas de Datos -->
+        <h2>Gráficas de Datos</h2>
+        <div class="charts-container">
+            <canvas id="temperatureInsideChart"></canvas>
+            <canvas id="temperatureOutsideChart"></canvas>
+            <canvas id="humidityChart"></canvas>
+            <canvas id="gasChart"></canvas>
+        </div>
+
+        <!-- Gráficas de Estadísticas -->
+        <h2>Estadísticas</h2>
+        <div class="stats-charts-container">
+            <canvas id="temperatureInsideStatsChart"></canvas>
+            <canvas id="temperatureOutsideStatsChart"></canvas>
+            <canvas id="humidityStatsChart"></canvas>
+            <canvas id="gasStatsChart"></canvas>
+        </div>
+        <h2>Estadísticas de Movimiento</h2>
+        <div class="stats-container">
+            <div class="card" id="total-records-card">
+                <h3>Total de Registros</h3>
+                <p id="total-records">Cargando...</p>
+            </div>
+            <div class="card" id="movement-count-card">
+                <h3>Movimientos Detectados</h3>
+                <p id="movement-count">Cargando...</p>
+            </div>
+            <div class="card" id="movement-probability-card">
+                <h3>Probabilidad de Movimiento (%)</h3>
+                <p id="movement-probability">Cargando...</p>
+            </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
